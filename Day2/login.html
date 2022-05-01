@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce nav bar</title>
+    <style>
+      #navbar {
+        display: flex;
+        justify-content: space-around;
+        font-size: 29px;
+        padding: 10px;
+        background-color: rgb(124, 124, 230);
+        color: beige;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <div><a href="index.html">Sign up</a></div>
+      <div><a href="login.html">Login</a></div>
+      <div><a href="mens.html">Men's</a></div>
+      <div><a href="womens.html">Women's</a></div>
+    </div>
+
+    <div id="logindetails">
+      <input type="text" id="name" placeholder="enter your register name" />
+      <input type="text" id="pw" placeholder="enter register password" />
+      <button>Login</button>
+    </div>
+  </body>
+  <script>
+    var details = document.querySelector("#logindetails");
+    var logindata = JSON.parse(localStorage.getItem("logindetails"));
+
+    document
+      .querySelector("button")
+      .addEventListener("click", function (event) {
+        var dataobj = {
+          name: document.querySelector("#name").value,
+          pw: document.querySelector("#pw").value,
+        };
+
+        if (logindata == null) {
+          alert("Please careate an account");
+        } else if (
+          logindata.name.value == dataobj.name &&
+          logindata.pw.value == dataobj.pw
+        ) {
+          alert("Sign in Successful");
+          localStorage.setItem("logindetails", JSON.stringify(logindata));
+        } else {
+          alert("User Dose not Exist or email or password");
+        }
+      });
+  </script>
+</html>
