@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="" id="username" placeholder="username" />
+      <input type="text" name="" id="email" placeholder="email" />
+      <input type="text" id="password" placeholder="password" />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    var form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var data = {
+        username: form.username.value,
+        email: form.email.value,
+        password: form.password.value,
+      };
+      localStorage.setItem("userData", JSON.stringify(data));
+      window.location.href = "signin .html";
+    });
+  </script>
+</html>

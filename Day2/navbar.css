@@ -1,0 +1,32 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+}
+.logo {
+  display: flex;
+  width: 20%;
+}
+.text {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.user {
+  display: flex;
+  width: 20%;
+  margin-left: 20px;
+  justify-content: space-around;
+  text-decoration: none;
+}
+body {
+  background-color: rgb(255, 228, 228);
+}
+.user > div {
+  margin-left: 10px;
+}
