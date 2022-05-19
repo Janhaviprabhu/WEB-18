@@ -3,6 +3,7 @@
     border: 1px solid black;
     justify-content: flex-end;
     gap: 50px;
+    position: sticky;
 
 }
 #home{
