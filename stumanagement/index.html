@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="navbar">
+        <div>FT-WEB16 <div id="count1"></div></div>
+        <div>FT-WEB17 <div id="count2"></div></div>
+        <div>FT-WEB18 <div id="count3"></div></div>
+    </div>
+    <h2>Enter your details Here</h2>
+    <form id="form" action="">
+        <p id="p">Name</p>
+        <input id="name" type="text" placeholder="Enter name"><br>
+        <p>Course</p>
+        <input id="course" type="text" placeholder="Enter course"><br>
+        <p>Unit</p>
+        <input id="unit" type="number" placeholder="Enter unit"><br>
+        <p>Image Url</p>
+        <input id="url" type="url" placeholder="Enter image url"><br>
+        <p>Batch</p>
+        <select name="" id="batch">
+            <option value="FT-WEB16">FT-WEB16</option>
+            <option value="FT-WEB17">FT-WEB17</option>
+            <option value="FT-WEB18">FT-WEB18</option>
+        </select><br>
+        <input id="btn" type="Submit">
+    </form>
+    
+</body>
+<script>
+
+document.querySelector("#form").addEventListener("submit", onsubmit)
+
+var dataArr=JSON.parse(localStorage.getItem("students_data")) || []
+function onsubmit(){
+    event.preventDefault()
+
+    var dataobj={
+        stuname:form.name.value,
+        course:form.course.value,
+        unit:form.unit.value,
+        imgurl:form.url.value,
+        batch:form.batch.value
+    }
+
+    dataArr.push(dataobj)
+    localStorage.setItem("students_data",JSON.stringify(dataArr))
+    window.location.href="students.html"
+}
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord</title>
+    <link rel="stylesheet" href="students.css">
+</head>
+<body>
+    <div id="navbar">
+        <div>FT-WEB16 <div id="count1"></div></div>
+        <div>FT-WEB17 <div id="count2"></div></div>
+        <div>FT-WEB18 <div id="count3"></div></div>
+    </div>
+
+    <h2>Details</h2>
+    <div id="container">
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Course</td>
+                    <td>Unit</td>
+                    <td>Profile</td>
+                    <td>Batch</td>
+                    <td>Remove</td>
+                </tr>
+
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+<script>
+
+var trashdata=JSON.parse(localStorage.getItem("trash"))
+var dataArray=JSON.parse(localStorage.getItem("students_data"))
+
+let count16=0;
+let count17=0;
+let count18=0;
+dataArray.forEach(function(elem,index){
+
+    var tr= document.createElement("tr")
+    tr.setAttribute("id", "tr")
+    
+    var td1=document.createElement("td")
+    td1.setAttribute("id", "td1")
+    td1.innerText=elem.stuname
+
+    var td2=document.createElement("td")
+    td2.setAttribute("id", "td2")
+    td2.innerText=elem.course
+
+    var td3=document.createElement("td")
+    td3.setAttribute("id", "td3")
+    td3.innerText=elem.unit
+
+    var td4=document.createElement("td")
+    var img=document.createElement("img")
+    img.setAttribute("id","image")
+    img.setAttribute("src",elem.imgurl)
+    td4.append(img)
+
+    var td5=document.createElement("td")
+    td5.setAttribute("id", "td5")
+    td5.innerText=elem.batch
+    if ((td5.innerText=elem.batch)=="FT-WEB16"){
+        count16++;
+    }
+    else if((td5.innerText=elem.batch)=="FT-WEB17"){
+        count17++;
+    }
+    else if((td5.innerText=elem.batch)=="FT-WEB18"){
+        count18++;
+    }
+
+    var td6=document.createElement("td")
+    td6.setAttribute("id","td6")
+    td6.innerText="X"
+   td6.style.cursor = "pointer";
+        td6.addEventListener("click", function () {
+          deleteproduct(elem,index);
+        })
+
+    tr.append(td1,td2,td3,td4,td5,td6)
+    document.querySelector("tbody").append(tr)
+
+})
+var c16=document.getElementById("count1")
+c16.innerText=count16;
+var c17=document.getElementById("count2")
+c17.innerText=count17;
+var c18=document.getElementById("count3")
+c18.innerText=count18;
+
+
+// console.log(count16)
+// console.log(count17)
+// console.log(count18)
+
+ function deleteproduct(elem,index){
+     dataArray.splice(index,1)
+     localStorage.setItem("students_data",JSON.stringify(dataArray))
+     window.location.reload();
+     localStorage.setItem("trash",JSON.stringify(trashdata))
+ }  
+    
+
+
+</script>
+</html>

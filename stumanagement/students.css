@@ -1,0 +1,29 @@
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    padding: 5px;
+    font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#count1{
+    text-align: center;
+}
+#count2{
+    text-align: center;
+}
+#count3{
+    text-align: center;
+}
+td{
+    text-align: center;
+    padding: 20px;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#image{
+    width: 60px;
+    height: auto;
+}
+h2{
+    margin-left: 30px;
+}

@@ -1,0 +1,49 @@
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    padding: 10px;
+    font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+h2{
+    text-align: center;
+}
+#form{
+    padding-top: 1px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 350px;
+    gap: 10px;
+    margin: auto;
+    
+}
+input{
+    margin-left: 95px;
+}
+p{
+   font-size: 17px;
+   margin-left: 95px;
+}
+select{
+    margin-left: 95px;
+}
+#btn{
+    margin-left: 140px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid turquoise;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+#btn:hover{
+    background-color: teal;
+    cursor: pointer;
+}
+#p{
+    margin-top: 50px;
+    
+}
+
+
