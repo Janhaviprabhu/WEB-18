@@ -1,8 +1,9 @@
 #nav{
     display: flex;
-    border: 1px solid black;
     justify-content: flex-end;
     gap: 50px;
+    padding: 7px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
 #home{
@@ -43,4 +44,8 @@ h1{
 #submit:hover{
     background-color: teal;
     cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

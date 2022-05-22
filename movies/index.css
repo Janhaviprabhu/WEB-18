@@ -1,9 +1,10 @@
 #nav{
     display: flex;
-    border: 1px solid black;
     justify-content: flex-end;
     gap: 50px;
     position: sticky;
+    padding: 7px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
 #home{
@@ -16,12 +17,60 @@
     font-size: 20px;
 }
 #movies{
+    margin-left: 60px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3,1fr);
 
     
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+#slideshow{
+    height: 400pxpx;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
 
+#bannerImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
+}
+#sort-buttons{
+    display: flex;
+    margin-top: 30px;
+   
+}
+#H{
+    margin-left: 15px;
+     background-color: aquamarine;
+     border: 1px solid turquoise;
+     padding: 7px;
+     border-radius: 5px;
+}
+#L{
+    margin-left: 20px;
+     background-color: aquamarine;
+     border: 1px solid turquoise;
+     padding: 7px;
+     border-radius: 5px;
+}
+#H:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+#L:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+h2{
+    margin-left: 30px;
+}
