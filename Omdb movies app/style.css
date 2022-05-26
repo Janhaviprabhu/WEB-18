@@ -1,0 +1,39 @@
+.box{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+img{
+    border-radius: 7px 7px 0px 0px ;
+    width: 100%;
+}
+#container{
+    margin-top: 50px;
+}
+input{
+    margin-left: 550px;
+    width: 300px;
+    font-size: 17px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+button{
+    width: 90px;
+    font-size: 17px;
+}
+.im{
+    width: 150px;
+    margin: auto;
+}
+button{
+    background-color: white;
+    border: 1px soild black;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+.imdb{
+    padding-bottom: 20px;
+}
